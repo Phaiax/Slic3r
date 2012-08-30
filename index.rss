@@ -6,6 +6,46 @@
   <description>STL-to-GCODE translator for RepRap printers</description>
   <generator>BlazeBlogger 1.2.0</generator>
   <item>
+    <title>Slic3r 0.9.2 is out!</title>
+    <link>http://slic3r.org/blog/2012/08/22-slic3r-092-is-out/</link>
+    <guid>http://slic3r.org/blog/2012/08/22-slic3r-092-is-out/</guid>
+    <pubDate>Thu, 30 Aug 2012 00:00:01 GMT</pubDate>
+    <description><![CDATA[
+<p>This time no package is available for 64bit Linux. Sorry...</p>
+
+<p><small>This release and all recent work about support material and multiple extruders is sponsored by <a href="http://www.lulzbot.com/"><b>LulzBot</b></a>. Check out their products!</small></p>
+
+<h4>New features:</h4>
+<ul>
+    <li>new separate options for retraction length to be used when switching between multiple extruders</li>
+    <li>new option to disable retraction when moving between infill paths inside the same island</li>
+    <li>new option to configure the threshold for enforcing solid infill</li>
+    <li>export plates as AMF constellations (...next version will be able to import them back ;-))</li>
+</ul>
+
+<h4>Improvements:</h4>
+<ul>
+    <li>smarter retraction in multi-extruder prints</li>
+    <li>always connect infill paths, preventing gaps and unnecessary retractions</li>
+    <li>avoid backwards moves when doing honeycomb infill</li>
+    <li>accept newline as separator for post-processing scripts in the GUI</li>
+</ul>
+
+<h4>Changes:</h4>
+<ul>
+    <li>temperature-related M-codes for the Teacup firmware were updated to the most recent ones</li>
+</ul>
+
+<h4>Bugfixes:</h4>
+<ul>
+    <li>the "Delete" button in the Plater was causing crashes</li>
+    <li>brim was positioned incorrectly if no skirt was enabled</li>
+    <li>fixed regression causing some bridges not to be detected correctly</li>
+    <li>crazy temperatures were written when using sequential printing</li>
+    <li>removed warnings caused by output filenames containing the % character</li>
+</ul>    ]]></description>
+  </item>
+  <item>
     <title>Slic3r 0.9.1 is out!</title>
     <link>http://slic3r.org/blog/2012/08/21-slic3r-091-is-out/</link>
     <guid>http://slic3r.org/blog/2012/08/21-slic3r-091-is-out/</guid>
@@ -337,57 +377,6 @@ We have a shiny new beautiful icon now! Thanks to <a href="http://twitter.com/cd
     <li>fixed some fatal errors</li>
     <li>fixed some bogus non-manifold errors happening with certain values of first layer height</li>
     <li>infill extrudates were escaping perimeters sometimes</li>
-</ul>
-    ]]></description>
-  </item>
-  <item>
-    <title>Slic3r 0.7.0 is out!</title>
-    <link>http://slic3r.org/blog/2012/02/12-slic3r-070-is-out/</link>
-    <guid>http://slic3r.org/blog/2012/02/12-slic3r-070-is-out/</guid>
-    <pubDate>Sun, 26 Feb 2012 00:00:01 GMT</pubDate>
-    <description><![CDATA[
-This is a very important update: don't miss it and enjoy the goodies!
-
-<h4>Major new features:</h4>
-<ul>
-    <li>a <b>new rock-solid slicing algorithm</b>, based on a topological approach, able to process efficiently a wide range of STL files without any warning</li>
-    <li>generation of <b>support material</b> (optionally, with a <b>second extruder</b>)</li>
-    <li><b>cooling</b> and <b>fan control</b></li>
-    <li>ability to read the <b>AMF</b> format</li>
-</ul>
-
-<h4>New features:</h4>
-<ul>
-    <li><b>first layer temperature</b></li>
-    <li>support for <b>Makerbot</b> and <b>Mach3</b> G-code flavors</li>
-    <li>duplication is performed on generated toolpaths instead of 3D mesh, resulting in a <b>nearly-constant time</b> for any number of object copies</li>
-    <li>infill and support material are <b>multi-threaded</b>, so they will take advantage of multiple CPUs/cores</li>
-    <li>support for custom post-processing scripts</li>
-    <li>new notes field in configuration profiles</li>
-</ul>
-
-<h4>Improvements:</h4>
-<ul>
-    <li>uses 40% less memory</li>
-    <li>ability to load multiple config files using the command line</li>
-    <li>ask for confirmation when slicing more than one copy</li>
-    <li>contours and holes are extruded in the same direction (ccw)</li>
-    <li>skein multiple files with a single command from command line</li>
-    <li>some compensation for hole shrinkage</li>
-</ul>
-
-<h4>Minor improvements:</h4>
-<ul>
-    <li>do not display the progress dialog as an application-wide modal dialog</li>
-    <li>Config files are now portable between Unix and Windows and allow for Unicode characters</li>
-    <li>added extrusion multiplier to G-code comments</li>
-</ul>
-
-<h4>Bugfixes:</h4>
-<ul>
-    <li>models with rounded walls had small useless infill regions</li>
-    <li>small perimeter speed was applied to all holes too, regardless of their size</li>
-    <li>fixed some fatal errors</li>
 </ul>
     ]]></description>
   </item>

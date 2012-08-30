@@ -1,0 +1,34 @@
+
+<p>This time no package is available for 64bit Linux. Sorry...</p>
+
+<p><small>This release and all recent work about support material and multiple extruders is sponsored by <a href="http://www.lulzbot.com/"><b>LulzBot</b></a>. Check out their products!</small></p>
+
+<h4>New features:</h4>
+<ul>
+    <li>new separate options for retraction length to be used when switching between multiple extruders</li>
+    <li>new option to disable retraction when moving between infill paths inside the same island</li>
+    <li>new option to configure the threshold for enforcing solid infill</li>
+    <li>export plates as AMF constellations (...next version will be able to import them back ;-))</li>
+</ul>
+
+<h4>Improvements:</h4>
+<ul>
+    <li>smarter retraction in multi-extruder prints</li>
+    <li>always connect infill paths, preventing gaps and unnecessary retractions</li>
+    <li>avoid backwards moves when doing honeycomb infill</li>
+    <li>accept newline as separator for post-processing scripts in the GUI</li>
+</ul>
+
+<h4>Changes:</h4>
+<ul>
+    <li>temperature-related M-codes for the Teacup firmware were updated to the most recent ones</li>
+</ul>
+
+<h4>Bugfixes:</h4>
+<ul>
+    <li>the "Delete" button in the Plater was causing crashes</li>
+    <li>brim was positioned incorrectly if no skirt was enabled</li>
+    <li>fixed regression causing some bridges not to be detected correctly</li>
+    <li>crazy temperatures were written when using sequential printing</li>
+    <li>removed warnings caused by output filenames containing the % character</li>
+</ul>

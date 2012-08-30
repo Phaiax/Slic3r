@@ -149,18 +149,44 @@
     </div>
     <div style="width: 500px">
       
-<h2 class="post">0.5.3 is out!</h2>
+<h2 class="post">Slic3r 0.9.2 is out!</h2>
 <div class="information">
-   <span class="date">2011-11-27</span>
+   <span class="date">2012-08-30</span>
 </div>
+
+<p>This time no package is available for 64bit Linux. Sorry...</p>
+
+<p><small>This release and all recent work about support material and multiple extruders is sponsored by <a href="http://www.lulzbot.com/"><b>LulzBot</b></a>. Check out their products!</small></p>
+
+<h4>New features:</h4>
+<ul>
+    <li>new separate options for retraction length to be used when switching between multiple extruders</li>
+    <li>new option to disable retraction when moving between infill paths inside the same island</li>
+    <li>new option to configure the threshold for enforcing solid infill</li>
+    <li>export plates as AMF constellations (...next version will be able to import them back ;-))</li>
+</ul>
+
+<h4>Improvements:</h4>
+<ul>
+    <li>smarter retraction in multi-extruder prints</li>
+    <li>always connect infill paths, preventing gaps and unnecessary retractions</li>
+    <li>avoid backwards moves when doing honeycomb infill</li>
+    <li>accept newline as separator for post-processing scripts in the GUI</li>
+</ul>
+
+<h4>Changes:</h4>
+<ul>
+    <li>temperature-related M-codes for the Teacup firmware were updated to the most recent ones</li>
+</ul>
 
 <h4>Bugfixes:</h4>
 <ul>
-    <li>options having zero values were broken 0.5.2</li>
-    <li>hollow objects were printed with wrong sparse infill</li>
-    <li>minor errors</li>
+    <li>the "Delete" button in the Plater was causing crashes</li>
+    <li>brim was positioned incorrectly if no skirt was enabled</li>
+    <li>fixed regression causing some bridges not to be detected correctly</li>
+    <li>crazy temperatures were written when using sequential printing</li>
+    <li>removed warnings caused by output filenames containing the % character</li>
 </ul>
-
       <div style="clear: both"></div>
     </div>
   </div>
